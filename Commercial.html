@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>rocketElevators - Multipurpose + Admin</title>
+	<meta name="description" content="" />
+	<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+	<!-- mobile settings -->
+	<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+	<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+	<!-- WEB FONTS : use %7C instead of | (pipe) -->
+	<link
+		href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700"
+		rel="stylesheet" type="text/css" />
+
+	<!-- CORE CSS -->
+	<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+	<!-- THEME CSS -->
+	<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+	<!-- PAGE LEVEL SCRIPTS -->
+	<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+</head>
+
+<!--
+		AVAILABLE BODY CLASSES:
+		
+		smoothscroll 			= create a browser smooth scroll
+		enable-animation		= enable WOW animations
+
+		bg-grey					= grey background
+		grain-grey				= grey grain background
+		grain-blue				= blue grain background
+		grain-green				= green grain background
+		grain-blue				= blue grain background
+		grain-orange			= orange grain background
+		grain-yellow			= yellow grain background
+		
+		boxed 					= boxed layout
+		pattern1 ... patern11	= pattern background
+		menu-vertical-hide		= hidden, open on click
+		
+		BACKGROUND IMAGE [together with .boxed class]
+		data-background="assets/images/rocketElevators/award.png"
+	-->
+
+<body class="smoothscroll enable-animation">
+
+	<!-- wrapper -->
+	<div id="wrapper">
+
+		<!-- 
+				AVAILABLE HEADER CLASSES
+
+				Default nav height: 96px
+				.header-md 		= 70px nav height
+				.header-sm 		= 60px nav height
+
+				.b-0 		= remove bottom border (only with transparent use)
+				.transparent	= transparent header
+				.translucent	= translucent header
+				.sticky			= sticky header
+				.static			= static header
+				.dark			= dark header
+				.bottom			= header on bottom
+				
+				shadow-before-1 = shadow 1 header top
+				shadow-after-1 	= shadow 1 header bottom
+				shadow-before-2 = shadow 2 header top
+				shadow-after-2 	= shadow 2 header bottom
+				shadow-before-3 = shadow 3 header top
+				shadow-after-3 	= shadow 3 header bottom
+
+				.clearfix		= required for mobile menu, do not remove!
+
+				Example Usage:  class="clearfix sticky header-sm transparent b-0"
+			-->
+		<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+
+			<!-- TOP NAV -->
+			<header id="topNav">
+				<div class="container">
+
+					<!-- Mobile Menu Button -->
+					<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+						<i class="fa fa-bars"></i>
+					</button>
+
+					<!-- Logo -->
+					<a class="logo float-left scrollTo" href="index.html">
+						<img src="assets/images/rocketElevators/rocketLogo.png" alt="" />
+					</a>
+
+					<!-- 
+							Top Nav 
+							
+							AVAILABLE CLASSES:
+							submenu-dark = dark sub menu
+						-->
+					<div class="navbar-collapse collapse float-right nav-main-collapse">
+						<nav class="nav-main">
+
+
+							<!-- 
+																	.nav-onepage
+																	Required for onepage navigation links
+																	
+																	Add .external for an external link!
+																-->
+							<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+								<li class="active"><!-- HOME -->
+									<a href="index.html">
+										HOME
+									</a>
+								</li>
+								<li><!-- Services -->
+									<a href="#services">
+										Services
+									</a>
+								</li>
+								<li><!-- PortFolio -->
+									<a href="#Portfolio">
+										Portfolio
+									</a>
+								</li>
+								<li><!-- NEWS -->
+									<a href="#news">
+										NEWS
+									</a>
+								</li>
+								<li><!-- CLIENTS -->
+									<a href="#clients">
+										CLIENTS
+									</a>
+								</li>
+								<li><!-- CONTACT -->
+									<a href="#contact">
+										CONTACT
+									</a>
+								</li>
+							</ul>
+
+						</nav>
+					</div>
+
+				</div>
+			</header>
+			<!-- /Top Nav -->
+
+		</div>
+
+
+		<!-- HOME -->
+		<section id="home" class="h-450"
+			style="width: 1450px; height: 30px;  background:url('assets/images/rocketElevators/commercialelevator.jpeg')">
+			<div class="display-table">
+				<div class="display-table-cell vertical-align-middle">
+
+					<div class="container text-Left">
+
+						<div class="m-0 fs-50 fw-300 wow fadeInUp" data-wow-delay="0.4s" style="color: rgb(0, 0, 0);">
+							<b>Commercial Services</b></h1>
+
+							<p class="lead font-lato fs-30 wow fadeInUp" data-wow-delay="0.7s"
+								Style="color: rgb(0, 0, 0); font-weight: 400; font-size: 5px; ">Elevate your business to
+								new heights with our cutting-edge commercial elevator service.</p>
+
+
+						</div>
+
+					</div>
+				</div>
+		</section>
+		<!-- /HOME -->
+
+
+
+
+		<!-- FEATURES -->
+		<section id="features">
+			<div class="container">
+
+				<header class="text-center mb-60">
+					<h2> Commercial Highlights</h2>
+					<p class="lead font-lato">Here are some of our best jobs done.</p>
+					<hr />
+				</header>
+
+				<!-- FEATURED BOXES 3 -->
+				<div class="row">
+					<div class="col-md-4 col-6">
+						<div class="text-center">
+							<img src="assets/images/rocketElevators/comPortfolio1.jpeg"
+								style="width: 400px; height: 180px;">
+							<h4>Quantam Solutions</h4>
+							<p>Cost: 62.50k</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-6">
+						<div class="text-center">
+							<img src="assets/images/rocketElevators/comPortfolio3.jpeg"
+								style="width: 400px; height: 180px;">
+							<h4>Astra Dynamics</h4>
+							<p>Cost: 250k</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-6">
+						<div class="text-center">
+							<img class="image-fluid" src="assets/images/rocketElevators/comPortfolio4.jpeg"
+								style="width: 400px; height: 180px;">
+							<h4>Zenith Enterprises</h4>
+							<p>Cost: 180k</p>
+						</div>
+					</div>
+				</div>
+				<!-- /FEATURED BOXES 3 -->
+
+				<!-- FEATURED BOXES 3 -->
+
+				<div class="row">
+					<div class="col-md-4 col-6">
+						<div class="text-center">
+							<img src="assets/images/rocketElevators/comPortfolio7.jpeg"
+								style="width: 400px; height: 180px;">
+							<h4>Omnisynergy Solutions</h4>
+							<p>Cost: 120k</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-6">
+						<div class="text-center">
+							<img src="assets/images/rocketElevators/comPortfolio9.jpeg"
+								style="width: 400px; height: 180px;">
+							<h4>Vantage Ventures</h4>
+							<p>Cost: 75k</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-6">
+						<div class="text-center">
+							<img src="assets/images/rocketElevators/comPortfolio2.jpeg"
+								style="width: 400px; height: 180px;">
+							<h4>SynthWave Solutions</h4>
+							<p>Cost: 220k</p>
+						</div>
+					</div>
+				</div>
+				<!-- /FEATURED BOXES 3 -->
+
+			</div>
+		</section>
+		<!-- /FEATURES -->
+
+
+
+
+		<!-- PRICING -->
+		<section id="pricing">
+			<div class="container">
+
+				<header class="text-center mb-60">
+					<h2>Our Pricing</h2>
+					<p class="lead font-lato">The pricing options are listed down below</p>
+					<hr />
+				</header>
+
+				<div class="row">
+
+					<div class="col-md-3 col-sm-3">
+
+						<div class="price-clean">
+							<h4>
+								<sup>$</sup>12,500<em>/Floor</em>
+							</h4>
+							<h5> 5 story building </h5>
+
+							<br />
+							<a href="Quote.html" class="btn btn-3d btn-teal">Learn More</a>
+						</div>
+
+					</div>
+
+					<div class="col-md-3 col-sm-3">
+
+						<div class="price-clean">
+							<h4>
+								<sup>$</sup>10,000<em>/Floor</em>
+							</h4>
+							<h5> 10 Story Building </h5>
+
+							<br />
+							<a href="Quote.html" class="btn btn-3d btn-teal">Learn More</a>
+						</div>
+
+					</div>
+
+					<div class="col-md-3 col-sm-3">
+
+						<div class="price-clean price-clean-popular">
+							<div class="ribbon">
+								<div class="ribbon-inner">POPULAR</div>
+							</div>
+
+							<h4>
+								<sup>$</sup>8000<em>/Floor</em>
+							</h4>
+							<h5> 15 Story building </h5>
+
+							<br />
+							<a href="Quote.html" class="btn btn-3d btn-primary">Learn More</a>
+						</div>
+
+					</div>
+
+					<div class="col-md-3 col-sm-3">
+
+						<div class="price-clean">
+							<h4>
+								<sup>$</sup>6,000<em>/Floor</em>
+							</h4>
+							<h5> 20+ story building </h5>
+
+
+							<br />
+							<a href="Quote.html" class="btn btn-3d btn-teal">Learn More</a>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+		</section>
+		<!-- /PRICING -->
+
+
+
+
+
+
+
+
+		<!-- -->
+		<section>
+			<div class="container">
+
+				<div class="row">
+
+					<div class="col-lg-4">
+
+						<div class="heading-title heading-border-bottom">
+							<h3>Rocket Elevator's Vision</h3>
+						</div>
+
+						<div class="toggle toggle-transparent-body toggle-accordion">
+
+							<div class="toggle active">
+								<label>Who we are?</label>
+								<div class="toggle-content">
+									<p>We are a elevator company loooking forward to looking forward to making life a
+										lot more convienient for those who need it. </p>
+								</div>
+							</div>
+
+							<div class="toggle">
+								<label>Our long-term vison</label>
+								<div class="toggle-content">
+									<p>We want to help as many people as possible get the mobility they need whether its
+										residential or commercial.</p>
+								</div>
+							</div>
+
+							<div class="toggle">
+								<label>How can we help you?</label>
+								<div class="toggle-content">
+									<p>If you think you need an elevator in your house becasue stairs are becoming to
+										much, we can take away the need to use the stairs right awa</p>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="col-lg-4">
+
+						<div class="heading-title heading-border-bottom">
+							<h3>Rocket Elevator Skills</h3>
+						</div>
+
+						<div class="progress progress-lg"><!-- progress bar -->
+							<div class="progress-bar progress-bar-warning progress-bar-striped active text-left"
+								role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
+								style="width: 90%; min-width: 2em;">
+								<span>WEB DESIGN 90%</span>
+							</div>
+						</div><!-- /progress bar -->
+
+						<div class="progress progress-lg"><!-- progress bar -->
+							<div class="progress-bar progress-bar-danger progress-bar-striped active text-left"
+								role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"
+								style="width: 98%; min-width: 2em;">
+								<span>HTML/CSS 98%</span>
+							</div>
+						</div><!-- /progress bar -->
+
+						<div class="progress progress-lg"><!-- progress bar -->
+							<div class="progress-bar progress-bar-success progress-bar-striped active text-left"
+								role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+								style="width: 60%; min-width: 2em;">
+								<span>JAVASCRIPT 60%</span>
+							</div>
+						</div><!-- /progress bar -->
+
+						<div class="progress progress-lg"><!-- progress bar -->
+							<div class="progress-bar progress-bar-info progress-bar-striped active text-left"
+								role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"
+								style="width: 88%; min-width: 2em;">
+								<span>PHP/MYSQL 88%</span>
+							</div>
+						</div><!-- /progress bar -->
+
+					</div>
+
+				</div>
+
+			</div>
+		</section>
+		<!-- / -->
+
+
+
+		<!-- -->
+		<section class="alternate">
+			<div class="container">
+
+				<div class="text-center">
+					<h2 class="wow fadeInUp m-0" data-wow-delay="0.3s">DID ROCKET ELEVATORS CONVINCE YOU?</h2>
+
+					<p class="lead font-lato fs-30 wow fadeInUp mb-60" data-wow-delay="0.5s">Building a Landing Page was
+						never so Easy &amp; Interactive.</p>
+
+					<div class="mt-30">
+
+
+						<a class="btn btn-warning btn-lg" href="index.html#contact">CONTACT US <i
+								class="fa fa-angle-right"></i></a>
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<!-- / -->
+
+
+
+
+
+		<!-- FOOTER -->
+		<footer id="footer">
+			<div class="container">
+
+				<div class="row">
+
+					<div class="col-md-3">
+						<!-- Footer Logo -->
+						<img class="footer-logo" src="assets/images/rocketElevators/rocketLogo.png"
+							style="width: 200px; height: 70px" alt=""">
+
+							<!-- Small Description -->
+							<p>The worlds best elevator Service provider</p>
+
+							<!-- Contact Address -->
+							<address>
+								<ul class=" list-unstyled">
+						<li class="footer-sprite address">
+							PO Box 78432<br>
+							Sesame St, Nashville,<br>
+							Vivas 9518 United States<br>
+						</li>
+						<li class="footer-sprite phone">
+							Phone: 1-800-561-7777
+						</li>
+						<li class="footer-sprite email">
+							<a href="mailto:support@yourname.com">Rocketelevators@gmail.com
+						</li>
+						</ul>
+						</address>
+						<!-- /Contact Address -->
+
+					</div>
+
+					<div class="col-md-3">
+
+						<!-- Latest Blog Post -->
+						<h4 class="letter-spacing-1">LATEST NEWS</h4>
+						<ul class="footer-posts list-unstyled">
+							<li>
+								<a href="#">Coming in 2025, the title for worlds fasted elevator will be claimed by a
+									new tower being built in NYC</a>
+								<small>25 April 2023</small>
+							</li>
+							<li>
+								<a href="#">National weather Statement: There is a hurricane forming off the coast of
+									Africa that has great potential to strengthin</a>
+								<small>14 May 2023</small>
+							</li>
+							<li>
+								<a href="#">John Smith elected as the new state governer for Florida</a>
+								<small>5 January 2023</small>
+							</li>
+						</ul>
+						<!-- /Latest Blog Post -->
+
+					</div>
+
+					<div class="col-md-2">
+
+
+						<!-- /Links -->
+
+					</div>
+
+					<div class="col-md-4">
+
+						<!-- /Social Icons -->
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="copyright">
+				<div class="container">
+					<ul class="float-right m-0 list-inline mobile-block">
+						<li><a href="#">Terms &amp; Conditions</a></li>
+						<li>&bull;</li>
+						<li><a href="#">Privacy</a></li>
+					</ul>
+					&copy; All Rights Reserved, Company LTD
+				</div>
+			</div>
+		</footer>
+		<!-- /FOOTER -->
+
+	</div>
+	<!-- /wrapper -->
+
+
+	<!-- SCROLL TO TOP -->
+	<a href="#" id="toTop"></a>
+
+
+	<!-- PRELOADER -->
+	<div id="preloader">
+		<div class="inner">
+			<span class="loader"></span>
+		</div>
+	</div><!-- /PRELOADER -->
+
+
+	<!-- JAVASCRIPT FILES -->
+	<script>var plugin_path = 'assets/plugins/';</script>
+	<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+
+	<script src="assets/js/scripts.js"></script>
+
+	<!-- STYLESWITCHER - REMOVE -->
+	<script async src="demo_files/styleswitcher/styleswitcher.js"></script>
+</body>
+
+</html>

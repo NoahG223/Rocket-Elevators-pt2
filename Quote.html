@@ -160,7 +160,7 @@
 		<section id="contact">
 			<div class="container">
 
-				<header class="text-center mb-100">
+				<header class="text-left mb-100">
 					<h1> </h1>
 					<br>
 					<p class="lead font-lato"></p>
@@ -169,181 +169,120 @@
 
 
 
-				<div class="row">
-
-					<!-- FORM -->
-					<div class="col-md-8 col-sm-8">
-
-						<h3><b>Elevator Quote: </b>
-
-
-							<!--
-											MESSAGES
-											
-												How it works?
-												The form data is posted to php/contact.php where the fields are verified!
-												php.contact.php will redirect back here and will add a hash to the end of the URL:
-													#alert_success 		= email sent
-													#alert_failed		= email not sent - internal server error (404 error or SMTP problem)
-													#alert_mandatory	= email not sent - required fields empty
-													Hashes are handled by assets/js/contact.js
-			
-												Form data: required to be an array. Example:
-													contact[email][required]  WHERE: [email] = field name, [required] = only if this field is required (PHP will check this)
-													Also, add `required` to input fields if is a mandatory field. 
-													Example: <input required type="email" value="" class="form-control" name="contact[email][required]">
-			
-												PLEASE NOTE: IF YOU WANT TO ADD OR REMOVE FIELDS (EXCEPT CAPTCHA), JUST EDIT THE HTML CODE, NO NEED TO EDIT php/contact.php or javascript
-															 ALL FIELDS ARE DETECTED DINAMICALY BY THE PHP
-			
-												WARNING! Do not change the `email` and `name`!
-															contact[name][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
-															contact[email][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
-										-->
-
-							<!-- Alert Success -->
-							<div id="alert_success" class="alert alert-success mb-30">
-								<button type="button" class="close" data-dismiss="alert"
-									aria-hidden="true">&times;</button>
-								<strong>Thank You!</strong> Your message successfully sent!
-							</div><!-- /Alert Success -->
-
-
-							<!-- Alert Failed -->
-							<div id="alert_failed" class="alert alert-danger mb-30">
-								<button type="button" class="close" data-dismiss="alert"
-									aria-hidden="true">&times;</button>
-								<strong>[SMTP] Error!</strong> Internal server error!
-							</div><!-- /Alert Failed -->
-
-
-							<!-- Alert Mandatory -->
-							<div id="alert_mandatory" class="alert alert-danger mb-30">
-								<button type="button" class="close" data-dismiss="alert"
-									aria-hidden="true">&times;</button>
-								<strong>Sorry!</strong> You need to complete all mandatory (*) fields!
-							</div><!-- /Alert Mandatory -->
 
 
 							<form action="php/contact.php" method="post" enctype="multipart/form-data">
 								<fieldset>
 									<input type="hidden" name="action" value="contact_send" />
-
+                                   
 									<div class="row">
-										<div class="col-md-4">
-											<label for="contact:name">Input desired Service *</label>
-											<input required type="text" value="" class="form-control"
-												name="contact[name][required]" id="contact:name">
-										</div>
-										<div class="col-md-4">
-											<label for="contact:email">Number of floors *</label>
-											<input required type="email" value="" class="form-control"
-												name="contact[email][required]" id="contact:email">
-										</div>
-										<div class="col-md-4">
-											<label for="contact:phone">Phone *</label>
-											<input type="text" value="" class="form-control" name="contact[phone]"
-												id="contact:phone">
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-md-4">
-											<label for="contact:subject">Number of Elevators *</label>
-											<input required type="text" value="" class="form-control"
-												name="contact[subject][required]" id="contact:subject">
-										</div>
-										<div class="col-md-4">
-											<label for="contact_department">Preffered color *</label>
-											<select class="form-control pointer" name="contact[department]">
-												<option value="">--- Select ---</option>
-												<option value="Marketing">grey</option>
-												<option value="Webdesign">white</option>
-												<option value="Architecture">Black</option>
+										<div id="buildingType" class="col-md-4">
+											<label for="contact:name"><b>Select Service</b> *</label>
+											<select id="dropdown1" class="form-control pointer" name="contact[department]">
+												<option id="select" value="">--- Select ---</option>
+												<option id="residential" value="Residential">Residential</option>
+												<option id="commercial" value="Commercial">Commercial</option>
+												<option id="industrial" value="Industrial">Industrial</option>
 											</select>
 										</div>
-										<div class="col-md-4">
-											<label for="contact:subject">Max weight capacity *</label>
+									</div>
+									        <div class = "row">
+											<div style="text-align: left;" id="numberofappartments" class="col-md-6" style="display:block;">
+												<label >The number of apartments in the building*</label>
+												<input required type="number" value="" class="form-control"
+													id="Residentialappartments">
+											</div> </div>
+											<div class = "row">
+											<div id="maxOccupationPerFloor" class="col-md-4">
+												<label for="contact:phone">The maximum occupancy per floor in the building *</label>
+												<input type="text" value="" class="form-control" name="contact[phone]"
+													id="contact:phone">
+											</div> </div>
+										
+									
+									<div class="row">
+										<div id="numberOfFloors" class="col-md-6">
+											<label >The number of floors contained in the building*</label>
+											<input required type="number" value="" class="form-control"
+												name="contact[subject][required]" id="Floorsinbuilding">
+										</div>
+										<div id="numberOfElevators" class="col-md-4">
+											
+											<label for="contact:subject">The number of elevators needed *</label>
 											<input required type="text" value="" class="form-control"
-												name="contact[subject][required]" id="contact:subject">
+												name="contact[subject][required]" id="NUMELE">
 										</div>
 									</div>
-									<div class="row">
-										<div class="col-md-12">
-											<label for="contact:message">Project_Description *</label>
-											<textarea required maxlength="10000" rows="4" class="form-control"
-												name="contact[message]" id="contact:message"></textarea>
-										</div>
-										<div class="col-md-12">
-											<label for="contact:message">Extra notes *</label>
-											<textarea required maxlength="10000" rows="4" class="form-control"
-												name="contact[message]" id="contact:message"></textarea>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-md-12">
-											<label for="contact:attachment">picture or designated location *</label>
-
-											<!-- custom file upload -->
-											<input class="custom-file-upload" type="file" id="file"
-												name="contact[attachment]" id="contact:attachment"
-												data-btn-text="Select a File" />
-											<small class="text-muted block">Max file size: 10Mb
-												(zip/pdf/jpg/png)</small>
-
-										</div>
-									</div>
+								
 
 								</fieldset>
+                                  
+										<div class="row">
+										<div id="qual" class="col-md-4">
+											<label for="contact:name"><b>Select Quality</b> *</label>
+											<select id="dropdown2" class="form-control pointer" name="contact[department]">
+												<option id="select2" value="s" >---Select---</option>
+												<option id="standard" value="stanard1">Standard</option>
+												<option id="premium" value="premium1">Premium</option>
+												<option id="excelium" value="excelium1">Excelium</option>
+											</select>
+										</div>
+									</div>
+								
+									
+									<div class = "row">
+									<div id="AmountofElevators" class="col-md-4">
+											<label for="contact:subject">Amount of Elevators *</label>
+											<input required type="text" value="" readonly class="form-control"
+												 id="AMTELE">
+									</div> </div>
+									<div class = "row">
+									<div id="Elevatorcost" class="col-md-4">
+											<label >Price per unit *</label>
+											<input required type="text" value="" readonly class="form-control"
+												 id="priceperunit">
+									</div> </div>
+									<div class = "row">
+									<div id="Installationfees" class="col-md-4">
+											<label for="contact:subject">Installation fees *</label>
+											<input required type="text" value="" readonly class="form-control"
+												 id="Installfee">
+									</div> </div>
+									<div class = "row">
+									<div id="Finalcost" class="col-md-4">
+											<label for="contact:subject">Total cost estimate *</label>
+											<input required type="text" value="" readonly class="form-control"
+												 id="Totalcost">
+									</div> </div>
 
-								<div class="row">
+
+
+
+
+
+
+
+
+
+									<br>					
+								
+								
+									<div class="row">
 									<div class="col-md-12">
 										<button type="submit" class="btn btn-primary"><i class="fa fa-check"></i>
 											Submit</button>
 									</div>
 								</div>
-							</form>
 
+							</form>
+                        </div>
 					</div>
 					<!-- /FORM -->
 
 
-					<!-- INFO -->
-					<div class="col-md-4 col-sm-4">
+					
 
-						<h2>Visit Us</h2>
-
-						<!-- 
-										Available heights
-											h-100
-											h-150
-											h-200
-											h-250
-											h-300
-											h-350
-											h-400
-											h-450
-											h-500
-											h-550
-											h-600
-										-->
-
-
-						<hr />
-
-						<p>
-							<span class="block"><strong><i class="fa fa-map-marker"></i> Address:</strong> Sesame st,
-								Nashville
-								Name, United States</span>
-							<span class="block"><strong><i class="fa fa-phone"></i> Phone:</strong> <a
-									href="tel:1800-555-1234">1800-561-7777</a></span>
-							<span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a
-									href="mailto:mail@yourdomain.com">Rocketelevators@gmail.com</a></span>
-						</p>
-
-					</div>
-					<!-- /INFO -->
-
-				</div>
+				
 
 			</div>
 		</section>
@@ -481,6 +420,7 @@
 
 	<!-- STYLESWITCHER - REMOVE -->
 	<script async src="demo_files/styleswitcher/styleswitcher.js"></script>
+	<script src="./RocketElevators.js"></script> 
 </body>
 
 </html>

@@ -94,7 +94,7 @@ function calculateElevators(){
 
 }
 
-
+s
 
 function residentialApartments(totalNumberOfApartments, numberOfFloors ) {
     const avgApartmentsPerFloor = totalNumberOfApartments/numberOfFloors;

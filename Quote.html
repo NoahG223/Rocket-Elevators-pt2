@@ -196,7 +196,7 @@
 											<div id="maxOccupationPerFloor" class="col-md-4">
 												<label for="contact:phone">The maximum occupancy per floor in the building *</label>
 												<input type="text" value="" class="form-control" name="contact[phone]"
-													id="contact:phone">
+													id="maximumOccupancy">
 											</div> </div>
 										
 									
@@ -206,19 +206,30 @@
 											<input required type="number" value="" class="form-control"
 												name="contact[subject][required]" id="Floorsinbuilding">
 										</div>
+									
+										<div id="NumberOfFloors" class="col-md-6">
+											<label >The number of floors contained in the building*</label>
+											<input required type="number" value="" class="form-control"
+												name="contact[subject][required]" id="FloorsInbuilding">
+										</div>
+
+
+
+
+				
 										<div id="numberOfElevators" class="col-md-4">
 											
 											<label for="contact:subject">The number of elevators needed *</label>
 											<input required type="text" value="" class="form-control"
 												name="contact[subject][required]" id="NUMELE">
 										</div>
-									</div>
+									
 								
 
 								</fieldset>
                                   
-										<div class="row">
-										<div id="qual" class="col-md-4">
+										<!-- <div class="row">
+										<div id="Dropdown2divbox" class="col-md-4">
 											<label for="contact:name"><b>Select Quality</b> *</label>
 											<select id="dropdown2" class="form-control pointer" name="contact[department]">
 												<option id="select2" value="s" >---Select---</option>
@@ -227,9 +238,31 @@
 												<option id="excelium" value="excelium1">Excelium</option>
 											</select>
 										</div>
-									</div>
-								
-									
+									</div> -->
+									<div class="row">
+<div id="Dropdown2divbox">
+    
+      <div id= "standardbuttons" class="form-check">
+        <input class="form-check-input" value="standard1" type="radio" name="flexRadioDefault" id="standard" >
+        <label class="form-check-label" for="flexRadioDefault2">
+          standard
+        </label>
+      </div>
+      <div id= "premiumbuttons" class="form-check">
+        <input class="form-check-input" value="premium1" type="radio" name="flexRadioDefault" id="premium" > 
+        <label class="form-check-label" for="flexRadioDefault2">
+          Premium
+        </label>
+    </div>
+	      <div id="exceliumbuttons" class="form-check">
+        <input class="form-check-input" value="excelium1"  type="radio" name="flexRadioDefault" id="excelium" > 
+        <label class="form-check-label" for="flexRadioDefault2">
+          Excelium
+        </label>
+    </div>
+</div>
+</div>
+
 									<div class = "row">
 									<div id="AmountofElevators" class="col-md-4">
 											<label for="contact:subject">Amount of Elevators *</label>
@@ -239,19 +272,19 @@
 									<div class = "row">
 									<div id="Elevatorcost" class="col-md-4">
 											<label >Price per unit *</label>
-											<input required type="text" value="" readonly class="form-control"
+											<input required type="text" value="" readonly class="form-control" 
 												 id="priceperunit">
 									</div> </div>
 									<div class = "row">
 									<div id="Installationfees" class="col-md-4">
 											<label for="contact:subject">Installation fees *</label>
-											<input required type="text" value="" readonly class="form-control"
-												 id="Installfee">
+											<input required type="text" value="" readonly class="form-control" 
+												 id="installFee">
 									</div> </div>
 									<div class = "row">
 									<div id="Finalcost" class="col-md-4">
 											<label for="contact:subject">Total cost estimate *</label>
-											<input required type="text" value="" readonly class="form-control"
+											<input required type="text" value="" readonly class="form-control" 
 												 id="Totalcost">
 									</div> </div>
 
@@ -267,11 +300,7 @@
 									<br>					
 								
 								
-									<div class="row">
-									<div class="col-md-12">
-										<button type="submit" class="btn btn-primary"><i class="fa fa-check"></i>
-											Submit</button>
-									</div>
+
 								</div>
 
 							</form>
